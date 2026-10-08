@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+dist/
+.env
+.env.local
+*.log
+storage/generated/*
+storage/temp/*
+storage/thumbnails/*
+!storage/generated/.gitkeep
+!storage/temp/.gitkeep
+!storage/thumbnails/.gitkeep
+!storage/music/.gitkeep
+.DS_Store
+coverage/
