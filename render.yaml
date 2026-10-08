@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: ai-content-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.18.0
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 5000
+      - key: USE_QUEUE
+        value: false
+      # Set these in the Render dashboard (never commit secrets):
+      # MONGODB_URI, JWT_SECRET, ADMIN_EMAIL, ADMIN_PASSWORD,
+      # TOKEN_ENCRYPTION_KEY, GEMINI_API_KEY, META_APP_ID,
+      # META_APP_SECRET, META_REDIRECT_URI, FRONTEND_URL,
+      # NEXT_PUBLIC_API_URL (not needed on backend)
